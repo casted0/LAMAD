@@ -1,0 +1,70 @@
+
+1. Choose a routing service feature. Describe it in detail. Give examples when it is useful and when it is not.
+
+	CHOSEN FEATURE: Multipoint routing
+
+		- This feature was introduced to Google Maps in 2016, is quite usefull since with it it became possible to create routes, not only from one point to another
+		  but including different locations through the route, and of course the route gets modified to find the best way of getting from the start to the end
+		  but passing through these point in the most efficient way it is possible.
+	
+		- USEFUL: If for example I want to go from my house to the city centre but passing through the store, then I just have to add the new point to the route,
+			  but also in more complicated examples, like for example if you are having a long trip by car, and you know for sure that It will be necessary to 
+			  refill the fuel tank, then adding one point in a fuel station during the route would solve the problem.
+
+		- NOT USEFUL: Since using it is really optional, then I think that is always useful, if you don't want to pass through intermediate points then It's not even	
+			      necessary to use the feature, then just use the two points route.
+
+2. Find two services that provide an API. Explain what they offer. Do they allow GET or POST requests? Is it JSON or some other format?
+
+	SERVICE 1: Skyscanner Flight Search
+
+		- "The Skyscanner API lets you search for flights & get flight prices from Skyscanner's database of prices, as well as get live quotes directly from ticketing agencies." ~ extracted from RapidAPI
+		- Mostly GET requests (GET Browse Quotes, GET Browse Routes) but also one POST request for creating a session (POST Create Session)
+		- The format of the response as it's seen in the example It's JSON (https://rapidapi.com/skyscanner/api/skyscanner-flight-search)
+
+	SERVICE 2: Pokemon Go API
+
+		- "API that is dedicated to various machine readable data about Pokemon Go.." ~ extracted from RapidAPI
+		- Since is only dedicated to retrieve information about the game, only GET requests
+		- Again the format of the response as it's seen in the example It's JSON (https://rapidapi.com/brianiswu/api/pokemon-go1)
+
+
+
+3. Give four pros and four cons for using a server-side API.
+
+	PROS:
+	
+		- It's usefull to have client and server divided and just communicating through some technology like JSON, with this separation It's possible
+		  for example to have two different teams working on both sides, and if It's necessary to make any change in any side, it can be done without 
+		  affecting the other side.
+
+		- With the same API Rest is possible to develop multiple client-side adaptations, for example you can start developing an application for iOS
+		  or Android and with the exact same API Rest then do a website.
+
+		- Since with API Rest you only receive from the server plain data and not the full HTML+CSS pages, it takes less resources from the server.
+
+		- It has a lot of realiability since the only thing you need is a strong communication between the Client and the server, if that is correct
+		  then you can change your database, the techology you use or anything and there won't be any problem.
+
+	CONS:
+	
+		- It's hard to adapt to this technology if you have already on your mind the idea of classic server, for example in this APIs it exists the possibility
+		  that there are multiple servers attending the requests, then between servers they don't know if an user has logged using another server or not.
+
+		- At the beggining it will take a longer time to develop the structure of the API, but It's true that that time can be regained when the whole API is 
+		  already developed.
+
+		- It requires to have more knowledge about how HTTP and HTTPS protocols work.
+
+		- If your server side is based on REST it can happen to experience a desynchronization if the server-side is working/devolping things with a slower rythm
+
+
+4. Detective exercise
+
+	- Record the time it took to find it: 4'40''
+	a) What is the transportation mode?: As we can see in the pictures is bike
+	b) Are there similar routes in the database?: There are more routes through Kuopio
+	c) Was Radu traveling alone?: Also on the pictures we can see that He is at least with another guy
+	d) How round is the route?: It's 72 Km around Kuopio
+	e) How many stops are there?: There are picture taken in 3 to 5 places so at least 3 (Since is the only route that passes through that places)
+	f) How many hills are there?: 
