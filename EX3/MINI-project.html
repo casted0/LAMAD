@@ -36,7 +36,7 @@
     </script>
 
     <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFu26CSyrE-sBIdzv6lg1OaZcjiE5hSD0&callback=initMap">
+        src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=initMap">
     </script>
 
     <!-- Script that uses axios for sending the request to Geocode API -->
@@ -48,7 +48,7 @@
           axios.get('https://maps.googleapis.com/maps/api/geocode/json', {
             params:{
               address: temp_location,
-              key: 'AIzaSyCFu26CSyrE-sBIdzv6lg1OaZcjiE5hSD0'
+              key: 'YOUR_KEY'
             }
           })
           .then(function(response){
