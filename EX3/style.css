@@ -1,0 +1,36 @@
+
+#map {
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+#map-base {
+    width: 100%;
+    height: 600px;
+    background-color: aquamarine;
+    margin-top: 2%;
+}
+
+#address{
+    margin-left: 10px;
+}
+
+#located{
+  text-align: left;
+}
+
+#coordinates{
+  text-align: left;
+}
+
+
+body {
+    background-color: rgb(202, 255, 237);
+    height: 100%;
+}
+
+.paragraph{
+  margin-left: 10px;
+}
