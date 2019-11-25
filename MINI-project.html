@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title> MINI-Project Geocode </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <!-- Script for initializing the map at that specific location -->
+    <script>
+        // Initialize and add the map
+        function initMap() {
+          // The location of Tres Cantos
+          var trescantos = {lat: 40.600727, lng: -3.707974};
+          // The map, centered at Tres Cantos
+          var map = new google.maps.Map(
+              document.getElementById('map'), {zoom: 4, center: trescantos});
+          // The marker, positioned at Tres Cantos
+          var marker = new google.maps.Marker({position: trescantos, draggable: true, animation: google.maps.Animation.DROP, map: map});
+
+        }
+    </script>
+
+    <script>
+        // Modify the map
+        function modifyMap(location) {
+          // The map, centered at new location
+          var map = new google.maps.Map(
+              document.getElementById('map'), {zoom: 4, center: location});
+          // The marker, positioned at new location
+          var marker = new google.maps.Marker({position: location, draggable: true, animation: google.maps.Animation.DROP, map: map});
+
+        }
+    </script>
+
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFu26CSyrE-sBIdzv6lg1OaZcjiE5hSD0&callback=initMap">
+    </script>
+
+    <!-- Script that uses axios for sending the request to Geocode API -->
+    <script>
+
+        function geocode(){
+          console.log(document.getElementById('address').value);
+          var temp_location = document.getElementById('address').value;
+          axios.get('https://maps.googleapis.com/maps/api/geocode/json', {
+            params:{
+              address: temp_location,
+              key: 'AIzaSyCFu26CSyrE-sBIdzv6lg1OaZcjiE5hSD0'
+            }
+          })
+          .then(function(response){
+            console.log(response);
+
+            if(response.data.status === "ZERO_RESULTS"){
+              document.getElementById("located").innerHTML = "That location doesn't exist or could not be found.";
+              document.getElementById("coordinates").innerHTML = "No coordinates were found.";
+            }else{
+
+              console.log('Formatted Address located:');
+              console.log(response.data.results[0].formatted_address);
+
+              var latitude = response.data.results[0].geometry.location.lat;
+              var longitude = response.data.results[0].geometry.location.lng;
+              var newPosMarker = {lat: latitude, lng: longitude};
+              document.getElementById("located").innerHTML = "Located address: " + response.data.results[0].formatted_address;
+              document.getElementById("coordinates").innerHTML = "Latitude: " + latitude + ", Longitude: " + longitude;
+              modifyMap(newPosMarker);
+            }
+
+          })
+          .catch(function(error){
+            console.log(error);
+          });
+        }
+
+    </script>
+
+  <!-- Script for making the locate button executable with enter key -->
+    <script>
+        var input = document.getElementById("address");
+        input.addEventListener("keyup", function(event) {
+          if (event.keyCode === 13) {
+           event.preventDefault();
+           document.getElementById("locateBTN").click();
+          }
+        });
+    </script>
+
+  </head>
+  <body>
+    <h2 class="paragraph">Pablo Castedo Sanjuan - 306621</h2>
+    <h3 class="paragraph">Location-aware mobile applications development : Exercises #3 (3-6)</h3>
+    <div class="paragraph">
+        Search: <input type="text" name="address" id="address" value="Tres Cantos">
+        <input type="button" value="Locate" onclick="geocode();" id="locateBTN"><br><br>
+        <p id="located"></p>
+        <p id="coordinates"></p>
+    </div>
+    <div id="map-base">
+        <div id="map">
+
+        </div>
+    </div>
+  </body>
+</html>
