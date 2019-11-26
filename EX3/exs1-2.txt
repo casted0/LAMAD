@@ -1,0 +1,27 @@
+
+LAMAD exercises - session #3
+
+Pablo Castedo Sanjuán - 306621
+
+
+1. Choose  a  feature  unique  to a  mapping  service  (for  example,Street  view  is  unique  to  google). Describe the feature in detail. Give examples when it is useful and when it is not.
+
+	BeMap from BeNomad is a mapping server solution offering a suite of geolocation functions for integration into transport operators’ back-end IT systems or mobile/web applications.
+	Accessed via a set of web services, BeMap offers a suite of functions for planning and analysing routes, calculating vehicle journeys (for cars/HGVs), tracing back over completed
+	journeys and calculating transportation costs.
+
+	This feature can be really usefull in the specific tasks mentioned before so for example it could be used in apps for public transport and it would be quite efficient, but it's
+	specifically designed for vehicles, therefor a general use of this service for running/walking/biking would not be usefull.
+
+
+
+2. Select an example from Google Maps, Open Layers or anyother service provider:
+	https://developers.google.com/maps/documentation/javascript/examples
+	https://openlayers.org/en/latest/examples
+   Explain how it works and think of how it could be applied in a real application.
+
+
+	I've chosen google markers, the functioning is really simple, since a marker is just like a variable that keeps some specific coordinates and point at them in the map, so the basic 
+	use that we can think off is keeping multiple locations "saved", but also this markers can be draggable what makes them perfect for selecting spots in a map manually without knowing
+	the exact address or coordinates of the point we are looking for, in multiple online mapping services it is possible to move the marker to get almost inmediatly the coordinates
+	where it is pointing. Also this markers can be used for, in example calculating a route that passes through different points in the map.
