@@ -1,0 +1,43 @@
+1.Use the Mopsi recommendation system somewhere in your city. Write down the top five results. Why do you think these items are in the list?
+  Is the result useful? Is anything surprising in the list?
+
+  I've used the recommendation system in Madrid, the results have been in this order:
+
+    - Palace Hotel
+    - Puerta de Toledo
+    - San Francisco el Grande Basilica
+    - San Andres Church
+    - Mercado de San Miguel
+
+  This items are interest points or useful places (Palace hotel), I think is general is useful but is really wide, like Palace hotel is 
+  maybe economically not up for everybody, but I don't think that's a problem of Mopsi cause I didn't specify any filter of price or related.
+  So the results are not surprising since 4 of 5 items are really touristic places and they are really close to the Mopsi marker I placed.
+ 
+2.Give two examples, decisions that make an interface good and decisions that make an interface bad.
+
+    - Good:
+        · In order to make an interface clearer, It's a good idea to substitute text buttons for icons or images
+        · At least for me It's really comfortable when a website has hovers, it's really nice and make you feel the interaction
+
+    - Bad:
+        · An interface should be as much simple as possible, therefor an excess of text or buttons in the same screen is a bad idea
+        · There should be an harmony between all the aspects in the screen, different sizes in the components is in general a bad idea  
+          if there's not a good reason for it to be.
+
+3.In  software  development, compatibility  is  important.  Explain  in  your  own  words  what  the following concepts mean:
+
+    1.device compatibility: Device compatibility is the aspect of some software that makes it usable in multiple type of devices such as
+                            for example, webpages or applications that are useful in computers and smartphones or tablets
+    2.backwards compatibility: Compatibility in a software or hardware system with older or different versions of itself. For example           
+                               the first version of PS3 was able to read and play PS2 games.
+
+Can you give hypothetical examples for each?
+
+4.Test the Wind Router. Give any comments to Radu’s slide:
+    https://docs.google.com/presentation/d/1BE_kIfkWlmy97J35CZIz2mhb1cnmG6yEAhKwf2h3IZw/edit?usp=sharingFeedback can be anything:
+    report bugs, suggest improvements, what features would be cool?
+    
+5.Who is the target audience for the Wind Router?
+
+    Everyone that wants to be aware of wind direction and how it affects the routes, for example in a cold place you may be 
+    trying to avoid strong wind, but in a warm city in summer, thinking about using the wind might do the route more comfortable.
